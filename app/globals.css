@@ -4,8 +4,8 @@
 
 /* 🎧 Thème global inspiré de Spotify Backstage */
 :root {
-  --color-bg: #121212;
-  --color-bg-secondary: #181818;
+  --color-bg: #2d3c9b;
+  --color-bg-secondary: #00289f;
   --color-border: #282828;
   --color-accent: #1db954;
   --color-text: #ffffff;
@@ -20,14 +20,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ✅ Styles purs, sans @apply */
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
-  width: 16rem; /* w-64 */
-  border-right: 1px solid var(--color-border);
+  width: 16rem;
   background-color: var(--color-bg-secondary);
   display: flex;
   flex-direction: column;
@@ -78,9 +76,8 @@ body {
 }
 
 .card {
-  border-radius: 1rem;
-  border: 1px solid var(--color-border);
-  background-color: rgba(24, 24, 24, 0.9);
+  border-radius: 2rem;
+  background-color: rgba(36, 122, 214, 0.9);
   padding: 1.5rem;
   transition: all 0.3s;
 }
