@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎧 Thème global inspiré de Spotify Backstage */
+:root {
+  --color-bg: #121212;
+  --color-bg-secondary: #181818;
+  --color-border: #282828;
+  --color-accent: #1db954;
+  --color-text: #ffffff;
+  --color-text-muted: #b3b3b3;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ✅ Styles purs, sans @apply */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 16rem; /* w-64 */
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.sidebar-link:hover {
+  background-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 16rem; /* ml-64 */
+  right: 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(24, 24, 24, 0.9);
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.1);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.card-content {
+  color: var(--color-text-muted);
+}
+
+.main {
+  margin-left: 16rem; /* ml-64 */
+  padding: 5rem 2rem 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
