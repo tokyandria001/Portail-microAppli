@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Portail-microAppli
+  description: Portail-microAppli (TypeScript)
+  annotations:
+    github.com/project-slug: tokyandria001/Portail-microAppli
+  tags:
+    - typescript
+spec:
+  type: website
+  lifecycle: experimental
+  owner: guests
